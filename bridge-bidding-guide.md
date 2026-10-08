@@ -1,5 +1,45 @@
 # Bridge Bidding Guide
 
+## High Card Points (HCP)
+
+Add the value of every honour across all four suits:
+
+| Card | HCP |
+| --- | --- |
+| Ace (A) | 4 |
+| King (K) | 3 |
+| Queen (Q) | 2 |
+| Jack (J) | 1 |
+| 10 through 2 | 0 |
+
+## Distribution Points
+
+Extra points for suit length or shortness. Use one method at a time:
+
+- Before a fit ──► Count length: **+1 for each card beyond four in each suit**.
+- Raising partner's suit with a confirmed fit ──► Use the dummy-point method below instead.
+
+## Dummy Points
+
+When raising partner's suit, count shortness in side suits. For a major-suit raise, have at least three trumps opposite partner's five-card major.
+
+| Side-Suit Holding | Shortness Points |
+| --- | --- |
+| Void | 5 |
+| Singleton | 3 |
+| Doubleton | 1 |
+| 3 or more cards | 0 |
+
+**Dummy points = HCP + side-suit shortness points.** Do not also add length points or count shortness in trumps.
+
+## Total Points
+
+- Before a fit ──► **HCP + length points**.
+- Raising partner's suit with a fit ──► **HCP + shortness points (dummy points)**.
+- Range labelled HCP ──► **HCP only**.
+- Notrump ──► Use HCP as the starting point; do not add shortness points.
+- Combined partnership points ──► Add your count to partner's estimated count.
+
 ## Definitions
 
 - **Suit** — ♣♢♡♠
@@ -15,7 +55,7 @@
 - **Fit** — A suit which works for both you and your partner to make a contract
 - **Cuebid** — Bidding a suit an opponent has already bid in
 - **Slam** — Term for attempting to win between 12 and 13 tricks (6-7 bid)
-- **Outside** — Cards outside of your long suits, e.g Singleton
+- **Outside** — Cards outside of your long suits
 - **Stopper** — High Card (AKQJ) which would “stop” the opponent from winning a trick
 - **Stayman** — Asks partner if they have a 4-card Major. Partner bids 2 ♢ (no major), 2 ♡ (4 ♡), or 2 ♠ (4 ♠)
 - **Jacoby Transfers** — Used over 1NT. You bid the suit below your actual 5-card major, forcing partner to bid your major. (Shown in flow chart)
@@ -157,7 +197,7 @@ Considering a slam in an agreed suit auction:
 
 ## Bidding Thresholds
 
-Part of the purpose of bidding, is to identify whether or not you and your partner are in a position to bid well. The below examples are indicators of where you and your partner should be in order to fulfill a bid
+Use combined partnership points to estimate the contract level.
 
 | Category | Typical Contracts | Combined Points Required (HCP + Distribution) |
 | --- | --- | --- |
