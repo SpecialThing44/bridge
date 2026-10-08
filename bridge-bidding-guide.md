@@ -43,23 +43,62 @@ When raising partner's suit, count shortness in side suits. For a major-suit rai
 
 ## Definitions
 
-- **Artificial** — You are bidding something which means something else
-- **Cuebid** — Bidding a suit an opponent has already bid in
+### Hand and Suits
+
 - **Doubleton** — You have 2 cards in this suit
 - **Fit** — A suit which works for both you and your partner to make a contract
-- **Forcing** — You are making your partner follow your suit
 - **Honours** — AKQJ for suits, 4 Aces for Notrump
-- **Jacoby Transfers** — Used over 1NT. You bid the suit below your actual 5-card major, forcing partner to bid your major. (Shown in flow chart)
 - **Major Suit (Major)** — ♡♠
 - **Minor Suit (Minor)** — ♣♢
 - **Outside** — Cards outside of your long suits
 - **Singleton** — You have a single card in a suit
-- **Slam** — Term for attempting to win between 12 and 13 tricks (6-7 bid)
-- **Stayman** — Asks partner if they have a 4-card Major. Partner bids 2 ♢ (no major), 2 ♡ (4 ♡), or 2 ♠ (4 ♠)
 - **Stopper** — High Card (AKQJ) which would “stop” the opponent from winning a trick
 - **Suit** — ♣♢♡♠
 - **Void** — You have no cards in a suit
 - **[X]-Card Suit** — [X] is number of cards you have in the suit
+
+### Bidding and Raising
+
+- **Artificial** — You are bidding something which means something else
+- **Forcing** — You are making your partner follow your suit
+- **Jump Raise** — Raising partner's suit while skipping at least one available level.
+- **Limit Raise** — An invitational raise showing support and asking partner to bid game with extra strength.
+- **Raising** — Bidding partner's suit at a higher level to show support.
+- **Sign Off** — A bid intended to end the auction in the chosen contract.
+- **Simple Raise** — Raising partner's suit one level.
+
+### Competitive Bidding
+
+- **Cooperative Double** — Asks partner to choose between defending doubled and bidding, by partnership agreement.
+- **Cuebid** — Bidding a suit an opponent has already bid in
+- **Interference** — An opponent bids or doubles during your auction.
+- **Penalty Double** — A double intended to defeat the opponent's contract and increase the penalty.
+- **Preempt** — A high-level bid with a long suit and limited strength that takes bidding space from opponents.
+- **Psychic Bid** — A bid that deliberately misrepresents your strength or suit length.
+- **Takeout Double** — A double asking partner to bid an unbid suit, usually showing opening strength and support for the unbid suits.
+- **Weak Jump Overcall (WJO)** — A jump bid over an opponent's opening, showing a long suit and weak strength.
+- **Weak Two** — An opening 2♦, 2♥, or 2♠ showing a good six-card suit and limited strength.
+
+### Conventions
+
+- **Blackwood** — 4NT in an agreed suit auction asks for Aces.
+- **Feature Asking** — 2NT over a weak two asks opener to show an outside Ace or protected King with a maximum hand.
+- **Gambling 3NT** — An opening 3NT showing a solid 7+ card Minor with little outside strength.
+- **Gerber** — 4♣ over a natural 1NT or 2NT opening or rebid asks for Aces.
+- **Jacoby 2NT** — A game-forcing 2NT response to a 1♥ or 1♠ opening, showing 4+ trump support and 13+ dummy points.
+- **Jacoby Transfers** — Used over 1NT. You bid the suit below your actual 5-card major, forcing partner to bid your major. (Shown in flow chart)
+- **Landy** — A 2♣ overcall of 1NT showing both Majors, by partnership agreement.
+- **Law of Total Tricks** — With a fit, combined trump length guides competitive raises; it estimates total tricks available to both sides.
+- **Michaels Cuebid** — A cuebid of opponent's opening suit showing 5–5 or longer: both Majors over a Minor, or the other Major and a Minor over a Major.
+- **Pass-or-Correct** — Partner passes with the bid suit or corrects to their actual suit.
+- **Quantitative Slam** — A 4NT raise of natural notrump invites 6NT; partner accepts with a maximum.
+- **Stayman** — Asks partner if they have a 4-card Major. Partner bids 2 ♢ (no major), 2 ♡ (4 ♡), or 2 ♠ (4 ♠)
+- **Unusual 2NT** — A jump overcall of 2NT showing 5–5 or longer in the two lowest unbid suits.
+
+### Contracts
+
+- **Partscore** — A contract worth fewer than 100 trick points, below game.
+- **Slam** — Term for attempting to win between 12 and 13 tricks (6-7 bid)
 
 ## Master Bridge Decision Tree: SAYC System
 
