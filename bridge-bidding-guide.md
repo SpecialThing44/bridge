@@ -17,11 +17,11 @@ Add the value of every honour across all four suits:
 Extra points for suit length or shortness. Use one method at a time:
 
 - Before a fit ──► Count length: **+1 for each card beyond four in each suit**.
-- Raising partner's suit with a confirmed fit ──► Use the dummy-point method below instead.
+- Raising partner's Major with a confirmed fit ──► Use the dummy-point method below instead.
 
 ## Dummy Points
 
-When raising partner's suit, count shortness in side suits. For a major-suit raise, have at least three trumps opposite partner's five-card major.
+When raising partner's Major, count shortness in side suits with at least three trumps opposite partner's five-card Major.
 
 | Side-Suit Holding | Shortness Points |
 | --- | --- |
@@ -30,12 +30,13 @@ When raising partner's suit, count shortness in side suits. For a major-suit rai
 | Doubleton | 1 |
 | 3 or more cards | 0 |
 
-**Dummy points = HCP + side-suit shortness points.** Do not also add length points or count shortness in trumps.
+**Dummy points = HCP + side-suit shortness points.** Do not also add length points or count shortness in trumps. Discount unsupported honours in short suits.
 
 ## Total Points (TP)
 
 - Before a fit ──► **HCP + length points**.
-- Raising partner's suit with a fit ──► **HCP + shortness points (dummy points)**.
+- Raising partner's Major with a fit ──► **HCP + shortness points (dummy points)**.
+- Responding to a Minor opening ──► Use HCP + length points; do not add dummy points.
 - Range labelled HCP ──► **HCP only**.
 - Notrump openings and balanced raises ──► Use HCP. Count useful length when responding with a long suit; do not add shortness points.
 - Takeout double ──► Count HCP + shortness points in the opponent's suit.
@@ -45,14 +46,15 @@ When raising partner's suit, count shortness in side suits. For a major-suit rai
 
 ### Hand and Suits
 
+- **Balanced** — A 4–3–3–3, 4–4–3–2, or 5–3–3–2 hand.
 - **Doubleton** — You have 2 cards in this suit
 - **Fit** — A suit which works for both you and your partner to make a contract
-- **Honours** — AKQJ for suits, 4 Aces for Notrump
+- **Honours** — A, K, Q, J, and 10. The top three honours are A, K, and Q.
 - **Major Suit (Major)** — ♡♠
 - **Minor Suit (Minor)** — ♣♢
 - **Outside** — Cards outside of your long suits
 - **Singleton** — You have a single card in a suit
-- **Stopper** — High Card (AKQJ) which would “stop” the opponent from winning a trick
+- **Stopper** — A holding that can win a trick in a suit before opponents can run it; lower honours need enough small cards for protection.
 - **Suit** — ♣♢♡♠
 - **Void** — You have no cards in a suit
 - **[X]-Card Suit** — [X] is number of cards you have in the suit
@@ -60,7 +62,7 @@ When raising partner's suit, count shortness in side suits. For a major-suit rai
 ### Bidding and Raising
 
 - **Artificial** — You are bidding something which means something else
-- **Forcing** — You are making your partner follow your suit
+- **Forcing** — Partner must bid again; a one-round force requires one more bid, a game force requires reaching game.
 - **Jump Raise** — Raising partner's suit while skipping at least one available level.
 - **Limit Raise** — An invitational raise showing support and asking partner to bid game with extra strength.
 - **Raising** — Bidding partner's suit at a higher level to show support.
@@ -83,10 +85,10 @@ When raising partner's suit, count shortness in side suits. For a major-suit rai
 
 - **Blackwood** — 4NT in an agreed suit auction asks for Aces.
 - **Feature Asking** — 2NT over a weak two asks opener to show an outside Ace or protected King with a maximum hand.
-- **Gambling 3NT** — An opening 3NT showing a solid 7+ card Minor with little outside strength.
+- **Gambling 3NT** — An optional agreement showing a solid 7+ card Minor with little outside strength; SAYC uses a strong balanced 3NT opening.
 - **Gerber** — 4♣ over a natural 1NT or 2NT opening or rebid asks for Aces.
 - **Jacoby 2NT** — A game-forcing 2NT response to a 1♥ or 1♠ opening, showing 4+ trump support and 13+ dummy points.
-- **Jacoby Transfers** — Used over 1NT. You bid the suit below your actual 5-card major, forcing partner to bid your major. (Shown in flow chart)
+- **Jacoby Transfers** — Over 1NT, bid 2♦ for 5+ Hearts or 2♥ for 5+ Spades; partner bids your Major.
 - **Landy** — A 2♣ overcall of 1NT showing both Majors, by partnership agreement.
 - **Law of Total Tricks** — With a fit, combined trump length guides competitive raises; it estimates total tricks available to both sides.
 - **Michaels Cuebid** — A cuebid of opponent's opening suit showing 5–5 or longer: both Majors over a Minor, or the other Major and a Minor over a Major.
@@ -97,78 +99,94 @@ When raising partner's suit, count shortness in side suits. For a major-suit rai
 
 ### Contracts
 
-- **Partscore** — A contract worth fewer than 100 trick points, below game.
+- **Partscore** — A made contract worth fewer than 100 trick points, excluding bonuses.
 - **Slam** — Term for attempting to win between 12 and 13 tricks (6-7 bid)
 
 ## Master Bridge Decision Tree: SAYC System
 
 ### Section 1: Opening Bids
 
-Evaluate your hand for an Opening Bid:
+Evaluate your hand in order:
 
-- 1. 22+ HCP or equivalent playing strength
-    - Bid 2♣ (Artificial, game-forcing)
-- 2. 13–21 TP (Standard Opening Range)
-    - Balanced (no singletons/voids)
-        - 15–17 HCP ──► Bid 1NT
-        - 20–21 HCP ──► Bid 2NT
-    - Unbalanced Hand/Long Suits
-        - 5-card Major (Hearts or Spades)
-            - Open your 5-card Major (1♥ or 1♠) *(If 5-5 in Majors, open 1♥)*
-        - 4 card minor:
-            - Open your long/better Minor (1♦ with 4+ diamonds, or 1♣)
-- 3. 5–11 HCP and a 6-12 card long Suit (Preemptive / Tactical Range based on suit length)
-    - 11–12 card suit ──► Open 7-Level Grand Slam (Psychic/Extreme Preempt)*
-    - 9–10 card suit   ──► Open 6-Level Slam Preempt (6-level suit)
-    - 9-card Minor     ──► Open 5-Level Minor Preempt / Game (5♣ or 5♦)
-    - 8-card suit     ──► Open 4-Level Preempt (4♣, 4♦, 4♥, or 4♠)
-    - Solid 7+ card Minor with NO outside Aces/Kings ──► Bid 3NT (Gambling)
-    - Weak 7-card suit ──► Open 3-Level Preempt (3♣, 3♦, 3♥, or 3♠)
-    - Good 6-card suit ──► Open a Weak Two (2♦, 2♥, or 2♠)
-- 4. Below 13 TP and less than 6 long suit
-    - Pass
+- 1. Balanced hand in a direct Notrump range
+    - 15–17 HCP ──► Bid 1NT
+    - 20–21 HCP ──► Bid 2NT
+    - 25–27 HCP ──► Bid 3NT (Strong, balanced)
+- 2. 22+ HCP or equivalent playing strength, outside the direct Notrump ranges
+    - Bid 2♣ (Artificial, forcing; not always game-forcing)
+    - Balanced 22–24 HCP ──► Rebid 2NT after a 2♦ response; this rebid is not forcing
+- 3. 13+ TP, below strong 2♣ strength
+    - 5+ card Major ──► Open your longer Major; with equal lengths, open 1♠
+    - No 5-card Major ──► Open your longer Minor
+        - Equal Minor lengths of 4+ ──► Open 1♦
+        - 3–3 in Minors ──► Open 1♣
+    - Balanced hand outside direct Notrump ranges
+        - 12–14 HCP with opening TP ──► Open a suit; normally rebid 1NT if no fit is found
+        - 18–19 HCP ──► Open a suit; normally jump rebid 2NT if no fit is found
+- 4. Below standard one-level opening strength, with a good long suit
+    - Good 6-card suit and 5–11 HCP ──► Open a Weak Two (2♦, 2♥, or 2♠)
+    - Good 7-card suit ──► Consider a 3-level preempt
+    - Longer suit ──► Consider a higher preempt using playing strength and vulnerability
+    - Suit length alone does not justify a 5-, 6-, or 7-level opening
+- 5. No suitable opening ──► Pass
 
 ### Section 2: Responding Bids
 
-Partner's opening bid:
+Partner's opening bid, without interference:
 
-- PARTNER OPENED 2♣ (Artificial, Strong, Game-Forcing — 22+ HCP or equivalent playing strength):
-    - 0–7 TP (or lack a good 5+ card suit) ──► Bid 2♦ (Artificial Negative / Waiting)
-    - 8+ TP (Game-forcing strength):
-        - Good 5+ card suit with 2 of top 3 honors ──► Bid suit at 2- or 3-level (Positive)
-        - Balanced 8–10 HCP with stoppers ──► Bid 2NT (Positive Balanced)
-- PARTNER OPENED 1 OF A SUIT (1♣, 1♦, 1♥, or 1♠):
-    - 0–5 TP ──► Pass (Too weak unless interference occurs)
-    - 6+ TP:
-        - 3+ Support for Major (or 4+ for Minor) ──► Use TP; dummy points for major raises
-            - 6–9 TP ──► Simple Raise
-            - 10–12 TP ──► Limit Raise / Invitational
-            - 13+ TP ──► Jacoby 2NT (Major) or Strong Jump Raise
-        - No Support:
-            - 4+ Major of your own (1-level with 6+ TP, 2-level with 11+ TP)
-            - Balanced 6–10 HCP (Bid 1NT) / Good 5+ Minor & 10+ TP / 11+ HCP (Forcing 2NT) or 11+ TP (new suit)
+- PARTNER OPENED 2♣ (Artificial, Strong, Forcing):
+    - Good 5+ card suit with 2 of the top 3 honours and 8+ TP ──► Bid the suit at its cheapest level (Positive, game-forcing)
+    - Balanced 8+ HCP ──► Bid 2NT (Positive, game-forcing)
+    - Otherwise ──► Bid 2♦ (Artificial Waiting; may include a strong hand)
+    - After 2♦, opener's suit rebid forces to 3 of their Major or 4 of their Minor; a 2NT rebid may be passed
+- PARTNER OPENED 1♥ OR 1♠:
+    - 0–5 TP ──► Pass
+    - 3+ trump support ──► Count dummy points
+        - 6–10 TP ──► Simple Raise
+        - 10–12 TP ──► Limit Raise (Invitational)
+        - 13+ TP and 4+ support ──► Jacoby 2NT (Game-forcing)
+        - Game values without 4-card support ──► Bid a new suit first, then support partner
+    - No suitable raise
+        - 4+ Spades over 1♥ and 6+ TP ──► Bid 1♠
+        - New suit at the 2-level and 10+ TP ──► Bid 2♣ or 2♦ with 4+ cards, or 2♥ with 5+ cards (Forcing one round)
+        - 6–9 TP without a suitable suit response ──► Bid 1NT (Non-forcing)
+        - 15–17 HCP, balanced, with 2-card support ──► Bid 3NT
+- PARTNER OPENED 1♣ OR 1♦:
+    - 0–5 TP ──► Pass
+    - 6+ TP and a 4+ card suit available at the 1-level ──► Bid a new suit up the line; look for a Major fit
+    - No suitable 1-level suit response
+        - 10+ TP and a 4+ card new suit ──► Bid the suit at the 2-level (Forcing one round)
+        - Minor support (normally 5+ Clubs or 4+ Diamonds)
+            - 6–10 TP ──► Simple Raise
+            - 10–12 TP ──► Limit Raise
+            - Game values ──► Bid a new suit or Notrump; there is no forcing Minor raise
+        - Balanced, no 4-card Major
+            - 6–10 HCP ──► Bid 1NT
+            - 13–15 HCP ──► Bid 2NT (Game-forcing)
+            - 16–18 HCP ──► Bid 3NT
 - PARTNER OPENED 1NT (15–17 HCP):
-    - 0–7 TP ──► Pass
-    - 8+ TP:
-        - 4-card Major ──► Use Stayman (2♣)
-        - Balanced / No Major:
-            - 8–9 HCP ──► 2NT (Invitational)
-            - 10–15 HCP ──► 3NT (Game)
-            - 16–17 HCP ──► 4NT (Quantitative Slam)
+    - 4-card Major and invitational or better values, including 5–4 in the Majors ──► Use Stayman (2♣)
+    - Otherwise, 5+ card Major ──► Use Jacoby Transfers, even with a weak hand
+    - Balanced / No Major
+        - 0–7 HCP ──► Pass
+        - 8–9 HCP ──► Bid 2NT (Invitational)
+        - 10–15 HCP ──► Bid 3NT (Game)
+        - 16–17 HCP ──► Bid 4NT (Quantitative slam invitation)
 - PARTNER OPENED A WEAK TWO (2♦, 2♥, 2♠ — 5–11 HCP, 6-card suit):
-    - Strong fit & Law of Total Tricks ──► Raise to 3- or 4-level
-    - Powerful balanced hand (16+ HCP) ──► Bid 2NT (Feature asking) / Otherwise Pass
-- PARTNER OPENED A 3-LEVEL PREEMPT (3♣, 3♦, 3♥, 3♠ — 5–9 HCP, 7-card suit):
-    - Enough collective tricks to push to Game ──► Raise directly to Game
+    - Strong fit ──► Raise to play, using trump length and vulnerability
+    - Game interest ──► Bid 2NT (Forcing, feature asking; need not be balanced)
+    - 5+ card new suit ──► Bid the suit (Forcing one round)
     - Otherwise ──► Pass
-- PARTNER OPENED 3NT (Gambling — solid 7+ minor, minimal outside strength):
-    - Defensive stoppers/trust ──► Pass
-    - Weak with no stoppers ──► Bid 4♣ (Pass-or-correct to 4♦)
-- PARTNER OPENED A 4-LEVEL PREEMPT (4-level major/minor):
-    - Exceptional fit or slam interest ──► Raise/Bid further
-    - Otherwise ──► Pass (Partner has already preempted the maximum safe/tactical level)
-- PARTNER OPENED A 5-, 6-, OR 7-LEVEL PREEMPT:
-    - Pass almost always (partner has reached maximum structural limit; rare exceptions apply for grand slam tries).
+- PARTNER OPENED A 3-LEVEL PREEMPT:
+    - Enough collective tricks for Game ──► Raise directly to Game
+    - Otherwise ──► Pass
+- PARTNER OPENED 3NT (25–27 HCP, balanced):
+    - No slam interest or Major to investigate ──► Pass
+    - 4-card Major ──► Bid 4♣ (Stayman, not Gerber)
+    - 5+ card Major ──► Bid 4♦ for Hearts or 4♥ for Spades (Jacoby Transfers)
+- PARTNER OPENED A 4-LEVEL OR HIGHER PREEMPT:
+    - Enough playing strength for a higher contract ──► Bid further
+    - Otherwise ──► Pass
 
 ### Section 3: Overcalling Bids
 
@@ -179,65 +197,55 @@ Opponent's opening bid:
     - 12+ TP (shortness count), shortness in opponent's suit, support for unbid suits ──► Takeout Double
     - 5-5 distribution in two suits ──► Michaels Cuebid or Unusual 2NT
     - Weak with 5–11 HCP & strong 6-card suit ──► Weak Jump Overcall (WJO)
-    - Standard 8–17 TP with 5+ card suit ──► Natural Overcall (1-level or 2-level)
-- OPPONENT OPENED 1NT (15–17 HCP):
-    - Strong balanced 16+ HCP for penalty ──► Penalty Double
+    - Standard 8–16 TP with 5+ card suit ──► Natural Overcall; a 2-level overcall needs a good suit and extra strength
+- OPPONENT OPENED 1NT (15–17 HCP; conventional defenses require partnership agreement):
+    - Strong defensive hand with enough expected tricks to defeat 1NT ──► Penalty Double
     - 5-4 or 5-5 in Majors ──► Bid 2♣ (Landy Convention)
-    - 5-5 in two lowest minors ──► Bid 2NT (Unusual 2NT)
+    - 5–5 in both Minors, by agreement ──► Bid 2NT (Unusual 2NT)
     - Strong 6+ suit & 11–16 TP ──► Natural 2-level Overcall / Otherwise Pass
 - OPPONENT OPENED A WEAK TWO (2♦, 2♥, 2♠):
-    - Balanced 15–18 HCP with stopper ──► 3NT Overcall
+    - Balanced 16–19 HCP with stopper ──► 2NT Overcall
     - 12+ TP (shortness count), shortness in suit, support for unbid ──► Takeout Double
-    - Strong 5+ card suit & 12+ TP ──► Natural 3-level Overcall / Otherwise Pass
-- OPPONENT OPENED A 3-LEVEL PREEMPT OR 3NT GAMBLING:
-    - Strong defensive hand (15+ HCP) wanting penalty ──► Penalty Double
-    - Powerful 6+ suit & 14+ TP ──► Bid at 3- or 4-level / Otherwise Pass
+    - Strong 5+ card suit & opening strength ──► Natural Overcall at the cheapest level / Otherwise Pass
+- OPPONENT OPENED A 3-LEVEL PREEMPT:
+    - Opening strength, shortness in their suit, support for unbid suits ──► Takeout Double
+    - Strong balanced hand with stopper and enough playing strength ──► Consider 3NT
+    - Powerful long suit ──► Natural Overcall / Otherwise Pass
 - OPPONENT OPENED A HIGH-LEVEL PREEMPT (4, 5, or 6-level):
-    - Pass or apply strategic penalty/cooperative double depending on strict partnership agreements (high risk).
+    - Double of an opening 4♣ or 4♦ ──► Takeout
+    - Double of an opening 4♥ or higher ──► Penalty
+    - Otherwise ──► Bid naturally with enough playing strength, or Pass
 
 ### Section 4: Slam!
 
 #### Slam No Trump
 
-Considering a slam in a No Trump auction:
-
-- 1. Partner bid or rebid No Trump (1NT, 2NT, or 3NT) as the last natural bid
-    - No Trump context not confirmed ──► Do NOT bid 4♣ as Gerber (it may be natural or a minor suit bid).
-    - No Trump context confirmed:
-        - 2. Sufficient HCP to investigate a slam (Combined 33+ HCP)
-            - Opposite a 1NT opening (15–17 HCP): 16+ HCP
-            - Opposite a 2NT opening (20–21 HCP): 13+ HCP
-                - Insufficient HCP ──► Pass or sign off in game (Do not ask for Aces).
-                - Slam values confirmed:
-                    - 3. Ask for Aces directly
-                        - Bid 4♣ (Gerber)
-                            - Partner responds on step-1 level:
-                                - 4♦ ──► 0 or 4 Aces
-                                - 4♥ ──► 1 Ace
-                                - 4♠ ──► 2 Aces
-                                - 4NT ──► 3 Aces
+- Slam interest ──► Evaluate combined strength; about 33 HCP is a small-slam guide
+- Partner's natural 1NT or 2NT opening or rebid
+    - Invite based on strength ──► Bid 4NT (Quantitative; partner accepts with a maximum)
+    - Check Aces ──► Bid 4♣ (Gerber)
+        - 4♦ ──► 0 or 4 Aces
+        - 4♥ ──► 1 Ace
+        - 4♠ ──► 2 Aces
+        - 4NT ──► 3 Aces
+- Partner opened 3NT ──► 4♣ is Stayman, not Gerber
 
 #### Slam Trump Suit
 
-Considering a slam in an agreed suit auction:
-
-- 1. Agreed trump suit already established through the bidding
-    - No agreed trump suit ──► Do NOT bid 4NT as Blackwood (no fit or trump suit is agreed).
-    - Trump suit confirmed:
-        - 2. Sufficient TP and controls to investigate a slam (Combined 33+ TP)
-            - Insufficient TP or controls ──► Stop at game in your agreed suit.
-            - Slam-level values confirmed:
-                - 3. Check for missing Aces before committing
-                    - Bid 4NT (Blackwood)
-                        - Partner responds on step-1 level (Standard Blackwood):
-                            - 5♣ ──► 0 or 4 Aces
-                            - 5♦ ──► 1 Ace
-                            - 5♥ ──► 2 Aces
-                            - 5♠ ──► 3 Aces
+- Agreed trump suit and slam interest ──► Evaluate playing strength and controls; 33 TP is a guide, not a requirement
+- No agreed trump suit ──► Do not assume 4NT is Blackwood
+- Agreed trump suit and enough strength
+    - Void or two quick losers in a side suit ──► Prefer control bidding to Blackwood
+    - Check Aces ──► Bid 4NT (Standard Blackwood)
+        - 5♣ ──► 0 or 4 Aces
+        - 5♦ ──► 1 Ace
+        - 5♥ ──► 2 Aces
+        - 5♠ ──► 3 Aces
+- Missing two Aces or inadequate controls ──► Stop below slam
 
 ## Bidding Thresholds
 
-Use combined partnership points to estimate the contract level.
+Use combined partnership points as guides; suit quality, fit, and controls also matter.
 
 | Category | Typical Contracts | Combined Points |
 | --- | --- | --- |
