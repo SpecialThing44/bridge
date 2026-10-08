@@ -50,7 +50,7 @@ Evaluate your hand for an Opening Bid:
 
 ### Section 2: Responding Bids
 
-What type of opening bid did your partner make?
+Partner's opening bid:
 
 - PARTNER OPENED 2♣ (Artificial, Strong, Game-Forcing — 22+ HCP):
     - 0–7 HCP (or lack a good 5+ card suit) ──► Bid 2♦ (Artificial Negative / Waiting)
@@ -60,39 +60,39 @@ What type of opening bid did your partner make?
 - PARTNER OPENED 1 OF A SUIT (1♣, 1♦, 1♥, or 1♠):
     - 0–5 HCP ──► Pass (Too weak unless interference occurs)
     - 6+ HCP:
-        - 3+ Support for Major (or 4+ for Minor)?
+        - 3+ Support for Major (or 4+ for Minor)
             - 6–9 HCP ──► Simple Raise
             - 10–12 HCP ──► Limit Raise / Invitational
             - 13+ HCP ──► Jacoby 2NT (Major) or Strong Jump Raise
         - No Support:
-            - 4+ Major of your own? (1-level with 6+ HCP, 2-level with 11+ HCP)
+            - 4+ Major of your own (1-level with 6+ HCP, 2-level with 11+ HCP)
             - Balanced 6–10 HCP (Bid 1NT) / Good 5+ Minor & 10+ HCP / 11+ HCP (Forcing 2NT or new suit)
 - PARTNER OPENED 1NT (15–17 HCP):
     - 0–7 HCP ──► Pass
     - 8+ HCP:
-        - 4-card Major? ──► Use Stayman (2♣)
+        - 4-card Major ──► Use Stayman (2♣)
         - Balanced / No Major:
             - 8–9 HCP ──► 2NT (Invitational)
             - 10–15 HCP ──► 3NT (Game)
             - 16–17 HCP ──► 4NT (Quantitative Slam)
 - PARTNER OPENED A WEAK TWO (2♦, 2♥, 2♠ — 5–11 HCP, 6-card suit):
-    - Strong fit & Law of Total Tricks? ──► Raise to 3- or 4-level
-    - Powerful balanced hand (16+ HCP)? ──► Bid 2NT (Feature asking) / Otherwise Pass
+    - Strong fit & Law of Total Tricks ──► Raise to 3- or 4-level
+    - Powerful balanced hand (16+ HCP) ──► Bid 2NT (Feature asking) / Otherwise Pass
 - PARTNER OPENED A 3-LEVEL PREEMPT (3♣, 3♦, 3♥, 3♠ — 5–9 HCP, 7-card suit):
-    - Enough collective tricks to push to Game? ──► Raise directly to Game
+    - Enough collective tricks to push to Game ──► Raise directly to Game
     - Otherwise ──► Pass
 - PARTNER OPENED 3NT (Gambling — solid 7+ minor, minimal outside strength):
-    - Defensive stoppers/trust? ──► Pass
-    - Weak with no stoppers? ──► Bid 4♣ (Pass-or-correct to 4♦)
+    - Defensive stoppers/trust ──► Pass
+    - Weak with no stoppers ──► Bid 4♣ (Pass-or-correct to 4♦)
 - PARTNER OPENED A 4-LEVEL PREEMPT (4-level major/minor):
-    - Exceptional fit or slam interest? ──► Raise/Bid further
+    - Exceptional fit or slam interest ──► Raise/Bid further
     - Otherwise ──► Pass (Partner has already preempted the maximum safe/tactical level)
 - PARTNER OPENED A 5-, 6-, OR 7-LEVEL PREEMPT:
     - Pass almost always (partner has reached maximum structural limit; rare exceptions apply for grand slam tries).
 
 ### Section 3: Overcalling Bids
 
-What type of opening bid did the opponent make?
+Opponent's opening bid:
 
 - OPPONENT OPENED 1 OF A SUIT (1♣, 1♦, 1♥, or 1♠):
     - Balanced 15–18 HCP with stopper ──► 1NT Overcall
@@ -119,18 +119,18 @@ What type of opening bid did the opponent make?
 
 #### Slam No Trump
 
-Are you considering a slam in a No Trump auction?
+Considering a slam in a No Trump auction:
 
-- 1. Has your partner bid or rebid No Trump (1NT, 2NT, or 3NT) as the last natural bid?
-    - IF NO ──► Do NOT bid 4♣ as Gerber (it may be natural or a minor suit bid).
-    - IF YES (No Trump context confirmed):
-        - 2. Do you have sufficient HCP to investigate a slam (Combined 33+ HCP)?
-            - Opposite a 1NT opening (15–17 HCP): Do you hold 16+ HCP?
-            - Opposite a 2NT opening (20–21 HCP): Do you hold 13+ HCP?
-                - IF NO ──► Pass or sign off in game (Do not ask for Aces).
-                - IF YES (Slam values confirmed):
-                    - 3. Do you want to ask for Aces directly?
-                        - IF YES ──► Bid 4♣ (Gerber)
+- 1. Partner bid or rebid No Trump (1NT, 2NT, or 3NT) as the last natural bid
+    - No Trump context not confirmed ──► Do NOT bid 4♣ as Gerber (it may be natural or a minor suit bid).
+    - No Trump context confirmed:
+        - 2. Sufficient HCP to investigate a slam (Combined 33+ HCP)
+            - Opposite a 1NT opening (15–17 HCP): 16+ HCP
+            - Opposite a 2NT opening (20–21 HCP): 13+ HCP
+                - Insufficient HCP ──► Pass or sign off in game (Do not ask for Aces).
+                - Slam values confirmed:
+                    - 3. Ask for Aces directly
+                        - Bid 4♣ (Gerber)
                             - Partner responds on step-1 level:
                                 - 4♦ ──► 0 or 4 Aces
                                 - 4♥ ──► 1 Ace
@@ -139,16 +139,16 @@ Are you considering a slam in a No Trump auction?
 
 #### Slam Trump Suit
 
-Are you considering a slam in an agreed suit auction?
+Considering a slam in an agreed suit auction:
 
-- 1. Has an agreed trump suit already been established through the bidding?
-    - IF NO ──► Do NOT bid 4NT as Blackwood (no fit or trump suit is agreed).
-    - IF YES (Trump suit confirmed):
-        - 2. Do you have sufficient HCP and controls to investigate a slam (Combined 33+ HCP)?
-            - IF NO ──► Stop at game in your agreed suit.
-            - IF YES (Slam-level values confirmed):
-                - 3. Do you need to check for missing Aces before committing?
-                    - IF YES ──► Bid 4NT (Blackwood)
+- 1. Agreed trump suit already established through the bidding
+    - No agreed trump suit ──► Do NOT bid 4NT as Blackwood (no fit or trump suit is agreed).
+    - Trump suit confirmed:
+        - 2. Sufficient HCP and controls to investigate a slam (Combined 33+ HCP)
+            - Insufficient HCP or controls ──► Stop at game in your agreed suit.
+            - Slam-level values confirmed:
+                - 3. Check for missing Aces before committing
+                    - Bid 4NT (Blackwood)
                         - Partner responds on step-1 level (Standard Blackwood):
                             - 5♣ ──► 0 or 4 Aces
                             - 5♦ ──► 1 Ace
