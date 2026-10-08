@@ -43,23 +43,23 @@ When raising partner's suit, count shortness in side suits. For a major-suit rai
 
 ## Definitions
 
-- **Suit** — ♣♢♡♠
-- **Minor Suit (Minor)** — ♣♢
-- **Major Suit (Major)** — ♡♠
-- **[X]-Card Suit** — [X] is number of cards you have in the suit
-- **Honours** — AKQJ for suits, 4 Aces for Notrump
-- **Void** — You have no cards in a suit
-- **Singleton** — You have a single card in a suit
-- **Doubleton** — You have 2 cards in this suit
-- **Forcing** — You are making your partner follow your suit
 - **Artificial** — You are bidding something which means something else
-- **Fit** — A suit which works for both you and your partner to make a contract
 - **Cuebid** — Bidding a suit an opponent has already bid in
-- **Slam** — Term for attempting to win between 12 and 13 tricks (6-7 bid)
-- **Outside** — Cards outside of your long suits
-- **Stopper** — High Card (AKQJ) which would “stop” the opponent from winning a trick
-- **Stayman** — Asks partner if they have a 4-card Major. Partner bids 2 ♢ (no major), 2 ♡ (4 ♡), or 2 ♠ (4 ♠)
+- **Doubleton** — You have 2 cards in this suit
+- **Fit** — A suit which works for both you and your partner to make a contract
+- **Forcing** — You are making your partner follow your suit
+- **Honours** — AKQJ for suits, 4 Aces for Notrump
 - **Jacoby Transfers** — Used over 1NT. You bid the suit below your actual 5-card major, forcing partner to bid your major. (Shown in flow chart)
+- **Major Suit (Major)** — ♡♠
+- **Minor Suit (Minor)** — ♣♢
+- **Outside** — Cards outside of your long suits
+- **Singleton** — You have a single card in a suit
+- **Slam** — Term for attempting to win between 12 and 13 tricks (6-7 bid)
+- **Stayman** — Asks partner if they have a 4-card Major. Partner bids 2 ♢ (no major), 2 ♡ (4 ♡), or 2 ♠ (4 ♠)
+- **Stopper** — High Card (AKQJ) which would “stop” the opponent from winning a trick
+- **Suit** — ♣♢♡♠
+- **Void** — You have no cards in a suit
+- **[X]-Card Suit** — [X] is number of cards you have in the suit
 
 ## Master Bridge Decision Tree: SAYC System
 
