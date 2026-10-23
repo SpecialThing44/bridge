@@ -1,0 +1,933 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb}
+\usepackage[margin=0.56in,top=0.65in,bottom=0.57in,headheight=15pt,headsep=13pt]{geometry}
+\usepackage{xcolor,tikz,tcolorbox,enumitem,tabularx,array,fancyhdr,lastpage,hyperref}
+\usetikzlibrary{arrows.meta,positioning}
+\definecolor{ink}{HTML}{182C3B}
+\definecolor{muted}{HTML}{52606A}
+\definecolor{line}{HTML}{A4ADB4}
+\definecolor{wash}{HTML}{F3F5F6}
+\hypersetup{pdftitle={SAYC Print Reference},pdfauthor={Bridge Bidding Guide},colorlinks=true,linkcolor=ink,urlcolor=ink,bookmarksopen=true}
+\renewcommand{\familydefault}{\sfdefault}
+\newcommand{\C}{\ensuremath{\clubsuit}}
+\newcommand{\D}{\ensuremath{\diamondsuit}}
+\newcommand{\Hh}{\ensuremath{\heartsuit}}
+\renewcommand{\S}{\ensuremath{\spadesuit}}
+\newcommand{\branchmark}{\tikz[baseline=-0.4ex]{\draw[line width=.45pt,color=muted,-{Stealth[length=2pt,width=2.5pt]}] (0,.15)--(0,0)--(.14,0);}}
+\newlist{branches}{itemize}{5}
+\setlist[branches]{label=\branchmark,leftmargin=10pt,labelsep=3pt,itemsep=2.3pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+\newtcolorbox{guidecard}[1]{colback=white,colframe=line,colbacktitle=wash,coltitle=ink,fonttitle=\bfseries\fontsize{10.5}{12}\selectfont,title={#1},boxrule=.45pt,arc=1.5pt,left=6pt,right=6pt,top=4pt,bottom=5pt,toptitle=4pt,bottomtitle=4pt,before upper=\raggedright,before skip=0pt,after skip=9pt}
+\newcommand{\entry}[2]{\par\noindent\textbf{#1}\enspace #2\par\vspace{4.5pt}}
+\newcommand{\compactpage}{\fontsize{9.4}{11.4}\selectfont\setlist[branches]{label=\branchmark,leftmargin=10pt,labelsep=3pt,itemsep=1.7pt,topsep=1.5pt,parsep=0pt,partopsep=0pt}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\raggedright
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\bfseries SAYC\quad\normalfont PRINT REFERENCE}
+\fancyhead[R]{\small\nouppercase{\leftmark}}
+\fancyfoot[L]{\scriptsize HCP = high-card points\quad TP = total points\quad M = major\quad m = minor}
+\fancyfoot[R]{\small\thepage\ / \pageref*{LastPage}}
+\renewcommand{\headrulewidth}{.45pt}
+\renewcommand{\footrulewidth}{0pt}
+\newif\iffirstguidepage\firstguidepagetrue
+\newcommand{\guidepage}[4]{\iffirstguidepage\firstguidepagefalse\else\clearpage\fi\normalsize\setlist[branches]{label=\branchmark,leftmargin=10pt,labelsep=3pt,itemsep=2.3pt,topsep=2pt,parsep=0pt,partopsep=0pt}\phantomsection\label{#1}\pdfbookmark[0]{#3}{bookmark-#1}\markboth{#3}{}\noindent{\color{muted}\bfseries\small #2}\par\vspace{4pt}{\fontsize{24}{27}\selectfont\bfseries\color{ink}#3}\par\vspace{5pt}{\small\color{muted}#4}\par\vspace{12pt}}
+\newcommand{\navrow}[3]{\hyperref[#1]{\textbf{#2}} & \pageref*{#1}\\[5pt] {\small\color{muted}#3} & \\[5pt]}
+\begin{document}
+\guidepage{start}{QUICK START}{Find your auction}{A section-by-section decision reference for printing at 100\% on US Letter paper.}
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Page finder}
+\begin{tabularx}{\linewidth}{@{}Xr@{}}
+\navrow{opening}{1\quad Opening bids}{Start here when nobody has opened.}
+\navrow{responses}{2A\quad Suit-opening responses}{Respond to a one-level major or minor opening.}
+\navrow{strongresponses}{2B\quad Strong / preempt responses}{Respond to strong 2\C{}, weak twos or preempts.}
+\navrow{notrump}{2C\quad Notrump responses}{Choose a major search or a notrump contract.}
+\navrow{ntcontinuations}{3\quad Notrump continuations}{Continue after Stayman or transfers.}
+\navrow{opener}{4\quad Opener's rebids}{Natural rebids, Jacoby 2NT and weak twos.}
+\navrow{responder}{5\quad Responder's second bid}{Continue after opener has rebid.}
+\navrow{overcalls}{6\quad Opponent opened}{Overcalls, doubles and two-suiters.}
+\navrow{competition}{7\quad Competitive responses}{Partner overcalled, doubled or was overcalled.}
+\navrow{interference}{7\quad Interference / balancing}{Doubles, conventions and reopening.}
+\navrow{slam}{8\quad Slam decisions}{Ace / king asking and contract thresholds.}
+\navrow{defense}{9\quad Defensive leads / signals}{Opening leads, attitude and count.}
+\navrow{glossary1}{Glossary}{Hand shapes, bids and raising terms.}
+\navrow{glossary2}{Conventions / competition}{Definitions and contract terminology.}
+\end{tabularx}
+\end{guidecard}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Count the right points}
+\entry{HCP}{A = 4\quad K = 3\quad Q = 2\quad J = 1.\\10 through 2 = 0. Count every suit.}
+\entry{Before a fit}{TP = HCP + 1 for each card beyond four in each suit.}
+\entry{Raising partner's major}{With 3+ trumps opposite five, replace length points with side-suit shortness: void +5, singleton +3, doubleton +1.}
+\entry{Dummy points}{HCP + shortness points. Do not also add length points or count shortness in trumps. Discount unsupported honours in short suits.}
+\entry{Minor-opening responses}{Use HCP + length points; do not add dummy points.}
+\entry{Notrump}{Use HCP for openings and balanced raises. Useful length may help a long-suit response; shortness does not.}
+\entry{Takeout doubles}{Judge HCP, shortness in their suit and support for unbid suits together. SAYC has no fixed shortness-point formula.}
+\entry{Combined strength}{Add your count to partner's estimated count. A range labelled HCP means HCP only.}
+\end{guidecard}
+
+\begin{guidecard}{Follow the branches}
+Start with the auction situation, then follow indented conditions to the bold action. Use uncontested meanings unless a competitive section applies. An unpassed hand's new-suit response is normally forcing.\par\smallskip
+Point ranges are guides: consider suit quality, fit, controls and vulnerability. Optional and supplementary treatments require partnership agreement.
+\end{guidecard}
+
+\end{minipage}
+
+\guidepage{opening}{SECTION 1}{Opening bids}{Nobody has opened. Check direct notrump ranges first, then strength, shape and preempts.}
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Read in order}
+Balanced notrump openings may include a five-card Major or Minor. About 13+ TP is a one-level opening guide. Length points alone do not rule out a weak two or preempt; borderline hands require judgment.
+\end{guidecard}
+
+\begin{guidecard}{\textsf{\footnotesize 1}\quad Balanced in a direct NT range?}
+\begin{branches}
+\item 15--17 HCP\;\ensuremath{\longrightarrow}\;\textbf{Bid 1NT}
+\item 20--21 HCP\;\ensuremath{\longrightarrow}\;\textbf{Bid 2NT}
+\item 25--27 HCP\;\ensuremath{\longrightarrow}\;\textbf{Bid 3NT (Strong, balanced)}
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{\textsf{\footnotesize 2}\quad 22+ HCP or equivalent playing strength?}
+\begin{branches}
+\item Bid 2\C{} (Artificial, forcing; not always game-forcing)
+\item Balanced 22--24 HCP\;\ensuremath{\longrightarrow}\;\textbf{Rebid 2NT after a 2\D{} response; this rebid is not forcing}
+\end{branches}
+\end{guidecard}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{\textsf{\footnotesize 3}\quad Normal one-level strength?}
+\begin{branches}
+\item 5+ card Major with no longer Minor\;\ensuremath{\longrightarrow}\;\textbf{Open your longer Major; with equal lengths, open 1\S{}}
+\item Longer Minor with a 5-card Major\;\ensuremath{\longrightarrow}\;\textbf{Normally open the longer Minor, planning natural rebids}
+\item No 5-card Major\;\ensuremath{\longrightarrow}\;\textbf{Open your longer Minor}
+\begin{branches}
+\item Equal Minor lengths of 4+\;\ensuremath{\longrightarrow}\;\textbf{Open 1\D{}}
+\item 3--3 in Minors\;\ensuremath{\longrightarrow}\;\textbf{Open 1\C{}}
+\end{branches}
+\item Majors normally require 5+ cards in all seats; judgment may justify an occasional 4-card Major opening in third seat
+\item Balanced hand outside direct Notrump ranges
+\begin{branches}
+\item 12--14 HCP with opening strength\;\ensuremath{\longrightarrow}\;\textbf{Open a suit; normally rebid 1NT if no fit or suitable 1-level suit rebid is available}
+\item 18--19 HCP\;\ensuremath{\longrightarrow}\;\textbf{Open a suit; normally jump rebid 2NT if no fit is found}
+\end{branches}
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{\textsf{\footnotesize 4}\quad Below one-level strength?}
+\begin{branches}
+\item Reasonable 6-card suit and 5--11 HCP\;\ensuremath{\longrightarrow}\;\textbf{Open a Weak Two (2\D{}, 2\Hh{}, or 2\S{})}
+\begin{branches}
+\item Rarely, an excellent 5-card suit or a poor 7-card suit unsuitable for a 3-level opening may qualify
+\end{branches}
+\item Good 7-card suit\;\ensuremath{\longrightarrow}\;\textbf{Consider a 3-level preempt}
+\item Longer suit\;\ensuremath{\longrightarrow}\;\textbf{Consider a higher preempt using playing strength and vulnerability}
+\item Suit length alone does not justify a 5-, 6-, or 7-level opening
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{\textsf{\footnotesize 5}\quad No suitable opening?}
+\textbf{Pass.}
+\end{guidecard}
+
+\end{minipage}
+
+\guidepage{responses}{SECTION 2A}{Respond to a suit opening}{No interference. Count support points for major raises; use HCP for balanced notrump bids.}
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Partner opened 1\Hh{} or 1\S{}}
+\begin{branches}
+\item 0--5 TP\;\ensuremath{\longrightarrow}\;\textbf{Pass}
+\item 3+ trump support\;\ensuremath{\longrightarrow}\;\textbf{Count dummy points}
+\begin{branches}
+\item 6--10 TP\;\ensuremath{\longrightarrow}\;\textbf{Simple Raise}
+\item 10--11 TP\;\ensuremath{\longrightarrow}\;\textbf{Limit Raise (Invitational)}
+\item Borderline 12 TP\;\ensuremath{\longrightarrow}\;\textbf{Use judgment: limit raise with invitational playing strength, or bid a forcing new suit then support with game-going strength}
+\item 13+ TP and 4+ support\;\ensuremath{\longrightarrow}\;\textbf{Jacoby 2NT (Game-forcing)}
+\item Game values without 4-card support\;\ensuremath{\longrightarrow}\;\textbf{Bid a new suit first, then support partner}
+\end{branches}
+\item Weak hand, 5+ trump support and shortness\;\ensuremath{\longrightarrow}\;\textbf{Consider a direct game raise (Preemptive)}
+\item Strong suit and slam interest\;\ensuremath{\longrightarrow}\;\textbf{Strong jump shift (Game-forcing)}
+\item No suitable raise
+\begin{branches}
+\item 4+ Spades over 1\Hh{} and 6+ TP\;\ensuremath{\longrightarrow}\;\textbf{Bid 1\S{}}
+\item New suit at the 2-level and 10+ TP\;\ensuremath{\longrightarrow}\;\textbf{Bid 2\C{} or 2\D{} with 4+ cards, or 2\Hh{} with 5+ cards (Forcing one round)}
+\item 6--9 TP without a suitable suit response\;\ensuremath{\longrightarrow}\;\textbf{Bid 1NT (Non-forcing)}
+\item 15--17 HCP, balanced, with 2-card support\;\ensuremath{\longrightarrow}\;\textbf{Bid 3NT}
+\end{branches}
+\end{branches}
+\end{guidecard}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Partner opened 1\C{} or 1\D{}}
+\begin{branches}
+\item 0--5 TP\;\ensuremath{\longrightarrow}\;\textbf{Pass}
+\item 6+ TP and a 4+ card suit available at the 1-level\;\ensuremath{\longrightarrow}\;\textbf{Normally show the longer suit; with equal four-card suits, bid up the line to look for a Major fit}
+\item No suitable 1-level suit response
+\begin{branches}
+\item 10+ TP and a 4+ card new suit\;\ensuremath{\longrightarrow}\;\textbf{Bid the suit at the 2-level (Forcing one round)}
+\item Minor support (normally 5+ Clubs or 4+ Diamonds)
+\begin{branches}
+\item 6--10 TP\;\ensuremath{\longrightarrow}\;\textbf{Simple Raise}
+\item 10--12 TP\;\ensuremath{\longrightarrow}\;\textbf{Limit Raise}
+\item Game values\;\ensuremath{\longrightarrow}\;\textbf{Bid a new suit or Notrump; there is no forcing Minor raise}
+\end{branches}
+\item Strong suit and slam interest\;\ensuremath{\longrightarrow}\;\textbf{Strong jump shift (Game-forcing)}
+\item Balanced, no 4-card Major
+\begin{branches}
+\item 6--10 HCP\;\ensuremath{\longrightarrow}\;\textbf{Bid 1NT}
+\item 13--15 HCP\;\ensuremath{\longrightarrow}\;\textbf{Bid 2NT (Game-forcing)}
+\item 16--18 HCP\;\ensuremath{\longrightarrow}\;\textbf{Bid 3NT}
+\item 11--12 HCP\;\ensuremath{\longrightarrow}\;\textbf{Use a natural suit response or limit raise where available; see the supplementary treatment box for 3--3--3--4 over 1\C{}. A direct 2NT remains game-forcing}
+\end{branches}
+\end{branches}
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{Supplementary: 3--3--3--4 over 1\C{}}
+\begin{branches}
+\item 11--12 HCP, exactly 3 Spades, 3 Hearts, 3 Diamonds, and 4 Clubs over 1\C{}\;\ensuremath{\longrightarrow}\;\textbf{Supplementary partnership treatment: respond 1\D{} on three cards, then invite in Notrump if opener shows a minimum; this exception is not specified in the SAYC booklet}
+\end{branches}
+\end{guidecard}
+
+\end{minipage}
+
+\guidepage{strongresponses}{SECTION 2B}{Strong / preempt responses}{Partner opened strong 2\C{}, a weak two or a higher preempt. Choose your response.}
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Partner opened strong 2\C{}}
+\begin{branches}
+\item 5+ card suit and 8+ TP\;\ensuremath{\longrightarrow}\;\textbf{Bid the suit at its cheapest level (Positive, game-forcing)}
+\item Balanced 8+ HCP\;\ensuremath{\longrightarrow}\;\textbf{Bid 2NT (Positive, game-forcing)}
+\item Otherwise\;\ensuremath{\longrightarrow}\;\textbf{Bid 2\D{} (Artificial Waiting; may include a strong hand)}
+\item After 2\D{}, opener's suit rebid forces to 3 of their Major or 4 of their Minor; a 2NT rebid may be passed
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{Weak two | 5--11 HCP, normally six cards}
+\begin{branches}
+\item Fit\;\ensuremath{\longrightarrow}\;\textbf{Raise to play, using trump length and vulnerability}
+\item Enough tricks for 3NT with the other suits stopped\;\ensuremath{\longrightarrow}\;\textbf{Bid 3NT (To play)}
+\item Game interest\;\ensuremath{\longrightarrow}\;\textbf{Bid 2NT (Forcing, feature asking; need not be balanced)}
+\item 5+ card new suit\;\ensuremath{\longrightarrow}\;\textbf{Bid the suit (Forcing one round)}
+\item Otherwise\;\ensuremath{\longrightarrow}\;\textbf{Pass}
+\end{branches}
+\end{guidecard}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Partner opened a three-level preempt}
+\begin{branches}
+\item Enough collective tricks for Game\;\ensuremath{\longrightarrow}\;\textbf{Raise directly to Game}
+\item Own suitable suit and values, below game\;\ensuremath{\longrightarrow}\;\textbf{New suit (Forcing)}
+\item Otherwise\;\ensuremath{\longrightarrow}\;\textbf{Pass}
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{Partner opened a higher preempt}
+\begin{branches}
+\item Enough playing strength for a higher contract\;\ensuremath{\longrightarrow}\;\textbf{Bid further}
+\item Otherwise\;\ensuremath{\longrightarrow}\;\textbf{Pass}
+\end{branches}
+\end{guidecard}
+
+\end{minipage}
+
+\guidepage{notrump}{SECTION 2C}{Respond to notrump}{Partner opened a balanced notrump hand. Choose a major-suit search, an invitation or a final contract.}
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Partner opened 1NT | 15--17 HCP}
+\begin{branches}
+\item 4-card Major and invitational or better values, including 5--4 in the Majors\;\ensuremath{\longrightarrow}\;\textbf{Use Stayman (2\C{})}
+\item Otherwise, 5+ card Major\;\ensuremath{\longrightarrow}\;\textbf{Use Jacoby Transfers, even with a weak hand}
+\item Balanced, no Major to investigate
+\begin{branches}
+\item 0--7 HCP\;\ensuremath{\longrightarrow}\;\textbf{Pass}
+\item 8--9 HCP\;\ensuremath{\longrightarrow}\;\textbf{Bid 2NT (Invitational)}
+\item 10--15 HCP\;\ensuremath{\longrightarrow}\;\textbf{Bid 3NT (Game)}
+\item 16--17 HCP\;\ensuremath{\longrightarrow}\;\textbf{Bid 4NT (Quantitative slam invitation)}
+\item Enough strength for slam\;\ensuremath{\longrightarrow}\;\textbf{Place the slam or investigate Aces with Gerber}
+\end{branches}
+\item Weak long Minor\;\ensuremath{\longrightarrow}\;\textbf{Bid 2\S{}; partner bids 3\C{}, then Pass with Clubs or correct to 3\D{}}
+\item 6+ card Minor and invitational values\;\ensuremath{\longrightarrow}\;\textbf{Bid 3\C{} or 3\D{} (Invitational to 3NT)}
+\item 6+ card Major and slam interest\;\ensuremath{\longrightarrow}\;\textbf{Bid 3\Hh{} or 3\S{}}
+\end{branches}
+\end{guidecard}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{2NT | 20--21, or strong 22--24 rebid}
+\begin{branches}
+\item 4-card Major and game values\;\ensuremath{\longrightarrow}\;\textbf{Bid 3\C{} (Stayman)}
+\item 5+ card Major\;\ensuremath{\longrightarrow}\;\textbf{Bid 3\D{} for Hearts or 3\Hh{} for Spades (Jacoby Transfers)}
+\item Balanced, no Major to investigate
+\begin{branches}
+\item Below game values\;\ensuremath{\longrightarrow}\;\textbf{Pass}
+\item Game values, no slam interest\;\ensuremath{\longrightarrow}\;\textbf{Bid 3NT}
+\item Slam invitation\;\ensuremath{\longrightarrow}\;\textbf{Bid 4NT (Quantitative)}
+\end{branches}
+\item Check Aces\;\ensuremath{\longrightarrow}\;\textbf{Bid 4\C{} (Gerber)}
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{Partner opened 3NT | 25--27 HCP}
+\begin{branches}
+\item No slam interest or Major to investigate\;\ensuremath{\longrightarrow}\;\textbf{Pass}
+\item 4-card Major\;\ensuremath{\longrightarrow}\;\textbf{Bid 4\C{} (Stayman, not Gerber)}
+\item 5+ card Major\;\ensuremath{\longrightarrow}\;\textbf{Bid 4\D{} for Hearts or 4\Hh{} for Spades (Jacoby Transfers)}
+\end{branches}
+\end{guidecard}
+
+\end{minipage}
+
+\guidepage{ntcontinuations}{SECTION 3}{Notrump continuations}{Follow the branch for Stayman or the transfer you have already made.}
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{After Stayman over 1NT}
+\begin{branches}
+\item Opener responds
+\begin{branches}
+\item No 4-card Major\;\ensuremath{\longrightarrow}\;\textbf{2\D{}}
+\item 4+ Hearts, including both Majors\;\ensuremath{\longrightarrow}\;\textbf{2\Hh{}}
+\item 4+ Spades without 4 Hearts\;\ensuremath{\longrightarrow}\;\textbf{2\S{}}
+\end{branches}
+\item Responder has a 4--4 Major fit
+\begin{branches}
+\item Invitational values\;\ensuremath{\longrightarrow}\;\textbf{Raise to 3 of the Major}
+\item Game values\;\ensuremath{\longrightarrow}\;\textbf{Raise to 4 of the Major}
+\end{branches}
+\item No fit, without a 5-card Major
+\begin{branches}
+\item Invitational values\;\ensuremath{\longrightarrow}\;\textbf{2NT}
+\item Game values\;\ensuremath{\longrightarrow}\;\textbf{3NT}
+\item Opener also has 4 Spades after showing Hearts\;\ensuremath{\longrightarrow}\;\textbf{Correct 3NT to 4\S{} when responder's auction shows 4 Spades}
+\end{branches}
+\item 5--4 in the Majors, no fit shown
+\begin{branches}
+\item Invitational values\;\ensuremath{\longrightarrow}\;\textbf{Bid your 5-card Major at the 2-level}
+\item Game values\;\ensuremath{\longrightarrow}\;\textbf{Bid your 5-card Major at the 3-level (Forcing)}
+\end{branches}
+\item Responder rebids a Minor at the 3-level\;\ensuremath{\longrightarrow}\;\textbf{5+ cards and slam interest}
+\item Weak hand able to Pass every response\;\ensuremath{\longrightarrow}\;\textbf{Stayman may be used to seek a better partscore}
+\end{branches}
+\end{guidecard}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{After a Jacoby Transfer over 1NT}
+\begin{branches}
+\item 2\D{} transfers to Hearts; 2\Hh{} transfers to Spades
+\item Opener normally accepts at the 2-level
+\begin{branches}
+\item 17 HCP and 4-card support\;\ensuremath{\longrightarrow}\;\textbf{May jump to the 3-level}
+\end{branches}
+\item After normal acceptance, responder chooses
+\begin{branches}
+\item Weak hand\;\ensuremath{\longrightarrow}\;\textbf{Pass}
+\item Invitational, 5-card Major\;\ensuremath{\longrightarrow}\;\textbf{2NT}
+\begin{branches}
+\item Opener has a minimum\;\ensuremath{\longrightarrow}\;\textbf{Pass without 3-card support, or bid 3 of the Major with a fit}
+\item Opener has a maximum\;\ensuremath{\longrightarrow}\;\textbf{Bid 3NT without 3-card support, or 4 of the Major with a fit}
+\end{branches}
+\item Invitational, 6+ card Major\;\ensuremath{\longrightarrow}\;\textbf{Raise the Major to 3}
+\item Game values, 5-card Major\;\ensuremath{\longrightarrow}\;\textbf{3NT; opener chooses 3NT or 4 of the Major}
+\item Game values, 6+ card Major\;\ensuremath{\longrightarrow}\;\textbf{Raise the Major to 4}
+\item New suit\;\ensuremath{\longrightarrow}\;\textbf{Natural, game-forcing}
+\end{branches}
+\item 5--5 in the Majors with game-forcing values\;\ensuremath{\longrightarrow}\;\textbf{Transfer to Spades, then bid 3\Hh{}}
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{After Stayman or Transfers over 2NT / 3NT}
+\begin{branches}
+\item After 2NT--3\C{}, opener responds 3\D{} without a Major, 3\Hh{} with Hearts, or 3\S{} with Spades only
+\item After 3NT--4\C{}, opener responds 4\D{} without a Major, 4\Hh{} with Hearts, or 4\S{} with Spades only
+\begin{branches}
+\item Using Stayman over 3NT commits the partnership above 3NT, even when opener denies a Major
+\end{branches}
+\item With both Majors\;\ensuremath{\longrightarrow}\;\textbf{Show Hearts first}
+\item After a transfer\;\ensuremath{\longrightarrow}\;\textbf{Opener bids the requested Major}
+\item Responder places the contract using combined strength and fit
+\end{branches}
+\end{guidecard}
+
+\end{minipage}
+
+\guidepage{opener}{SECTION 4}{Opener's rebids}{Continue a force. Pass only when the auction permits it.}
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{After a One-of-a-Suit Opening}
+Respond to a forcing bid; Pass is available only after a non-forcing response.\par\smallskip
+\begin{branches}
+\item After a 1-level suit response, balanced with no suitable fit or 1-level suit rebid
+\begin{branches}
+\item 12--14 HCP\;\ensuremath{\longrightarrow}\;\textbf{Rebid 1NT}
+\item 18--19 HCP\;\ensuremath{\longrightarrow}\;\textbf{Rebid 2NT}
+\end{branches}
+\item Minimum, about 13--15 TP\;\ensuremath{\longrightarrow}\;\textbf{Make the cheapest suitable rebid}
+\begin{branches}
+\item Partner made a simple raise\;\ensuremath{\longrightarrow}\;\textbf{Usually Pass}
+\item Support for partner's Major\;\ensuremath{\longrightarrow}\;\textbf{Simple Raise}
+\item Second suit\;\ensuremath{\longrightarrow}\;\textbf{Bid naturally without reversing}
+\item Long original suit\;\ensuremath{\longrightarrow}\;\textbf{Rebid it; normally 6+ cards}
+\end{branches}
+\item Medium, about 16--18 TP\;\ensuremath{\longrightarrow}\;\textbf{Invite or describe extra strength}
+\begin{branches}
+\item Partner made a simple raise\;\ensuremath{\longrightarrow}\;\textbf{Invite game}
+\item Support for partner's suit\;\ensuremath{\longrightarrow}\;\textbf{Jump Raise}
+\item 6+ card original suit\;\ensuremath{\longrightarrow}\;\textbf{Jump Rebid}
+\item Suitable longer first suit and higher-ranking second suit\;\ensuremath{\longrightarrow}\;\textbf{Reverse (Forcing one round)}
+\end{branches}
+\item Maximum, about 19--21 TP\;\ensuremath{\longrightarrow}\;\textbf{Make a strong rebid}
+\begin{branches}
+\item Support or a strong long suit\;\ensuremath{\longrightarrow}\;\textbf{Bid game or make a strong jump rebid}
+\item Second suit\;\ensuremath{\longrightarrow}\;\textbf{Jump Shift (Game-forcing)}
+\end{branches}
+\item Cheap new-suit rebids can include medium strength; they do not always show a minimum
+\item Partner made a limit raise\;\ensuremath{\longrightarrow}\;\textbf{Pass with a minimum; bid game with suitable extras}
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{After Jacoby 2NT}
+Opener shows shape first; the auction is game-forcing. With both shortness and a strong 5+ card side suit, this guide uses the supplementary partnership agreement of showing the side suit first.\par\smallskip
+\begin{branches}
+\item Strong 5+ card side suit\;\ensuremath{\longrightarrow}\;\textbf{Bid it at the 4-level}
+\item Otherwise, singleton or void\;\ensuremath{\longrightarrow}\;\textbf{Bid that side suit at the 3-level}
+\item No shortness or side suit to show
+\begin{branches}
+\item Minimum\;\ensuremath{\longrightarrow}\;\textbf{4 of the agreed Major}
+\item Medium, about 15--17 TP\;\ensuremath{\longrightarrow}\;\textbf{3NT}
+\item Maximum, about 18+ TP\;\ensuremath{\longrightarrow}\;\textbf{3 of the agreed Major}
+\end{branches}
+\item Responder\;\ensuremath{\longrightarrow}\;\textbf{Sign off in game or investigate slam using controls and Blackwood}
+\end{branches}
+\end{guidecard}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{After Strong 2\C{}}
+\begin{branches}
+\item Positive response\;\ensuremath{\longrightarrow}\;\textbf{Continue to game or slam}
+\item Waiting 2\D{} response
+\begin{branches}
+\item Balanced 22--24 HCP\;\ensuremath{\longrightarrow}\;\textbf{Rebid 2NT (Non-forcing); use the 2NT response structure}
+\item Long suit\;\ensuremath{\longrightarrow}\;\textbf{Rebid naturally; forces to 3 of opener's Major or 4 of opener's Minor}
+\end{branches}
+\item Responder's new suit\;\ensuremath{\longrightarrow}\;\textbf{Natural and forcing; do not Pass while a force remains}
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{After a Weak Two}
+\begin{branches}
+\item Partner bids 2NT\;\ensuremath{\longrightarrow}\;\textbf{Forcing feature inquiry with game interest, even after an opposing bid or double}
+\begin{branches}
+\item Minimum, about 5--8 HCP\;\ensuremath{\longrightarrow}\;\textbf{Rebid your suit}
+\item Maximum, about 9--11 HCP\;\ensuremath{\longrightarrow}\;\textbf{Show an outside Ace or King by bidding that suit}
+\item Maximum without a feature\;\ensuremath{\longrightarrow}\;\textbf{Bid 3NT}
+\end{branches}
+\item Partner bids a new suit (Forcing one round)
+\begin{branches}
+\item 3-card Major support, sometimes a doubleton honour\;\ensuremath{\longrightarrow}\;\textbf{Raise}
+\item No fit, minimum\;\ensuremath{\longrightarrow}\;\textbf{Rebid your suit}
+\item No fit, maximum\;\ensuremath{\longrightarrow}\;\textbf{Show another suit or bid Notrump}
+\end{branches}
+\item Partner raises or bids 3NT\;\ensuremath{\longrightarrow}\;\textbf{To play; normally Pass}
+\end{branches}
+\end{guidecard}
+
+\end{minipage}
+
+\guidepage{responder}{SECTION 5}{Responder's second bid}{Reevaluate combined strength and shape after opener has rebid.}
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Choose the contract level}
+Evaluate combined strength and shape; use HCP for balanced Notrump bids. Point ranges are approximate; assess borderline hands by fit and suit quality.\par\smallskip
+\begin{branches}
+\item After an initial 1-level suit response, opposite a minimum opener
+\begin{branches}
+\item About 6--9 TP\;\ensuremath{\longrightarrow}\;\textbf{Sign off with Pass, 1NT when available, or 2 of a previously bid suit, where legal}
+\item About 10--11 TP\;\ensuremath{\longrightarrow}\;\textbf{Invite with 2NT or 3 of a previously bid suit}
+\item Game values\;\ensuremath{\longrightarrow}\;\textbf{Bid game or make a forcing bid for more information}
+\end{branches}
+\item Opener showed extras\;\ensuremath{\longrightarrow}\;\textbf{Reevaluate combined strength; a minimum response may now be enough for game}
+\end{branches}
+\end{guidecard}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Forcing bids and continuations}
+\begin{branches}
+\item After opener rebids a suit
+\begin{branches}
+\item New suit by an unpassed responder\;\ensuremath{\longrightarrow}\;\textbf{Forcing one round}
+\item Fourth suit at the 2-level or higher\;\ensuremath{\longrightarrow}\;\textbf{May be artificial; asks for more information (Forcing one round)}
+\end{branches}
+\item After opener rebids 1NT
+\begin{branches}
+\item New suit at the 2-level without a jump or reverse\;\ensuremath{\longrightarrow}\;\textbf{Non-forcing}
+\item Responder's reverse or jump shift\;\ensuremath{\longrightarrow}\;\textbf{Game-forcing}
+\end{branches}
+\item After an unpassed hand's initial 2-level new-suit response\;\ensuremath{\longrightarrow}\;\textbf{Responder must bid again unless opener reached game}
+\begin{branches}
+\item Preference, 2NT, or a simple rebid can limit the hand
+\item Jump raise of opener's first suit to 3\;\ensuremath{\longrightarrow}\;\textbf{Game-forcing}
+\item Example: 1\S{}--2\C{}; 2\Hh{}--2\S{} is a non-forcing preference; 1\S{}--2\C{}; 2\Hh{}--3\S{} is game-forcing
+\end{branches}
+\item Passed-hand responses are not automatically forcing; assess the actual auction
+\end{branches}
+\end{guidecard}
+
+\end{minipage}
+
+\guidepage{overcalls}{SECTION 6}{Opponent opened}{Choose a natural overcall, takeout double, two-suited action or pass.}
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Opponent opened one of a suit}
+\begin{branches}
+\item Balanced 15--18 HCP, preferably with a stopper in opener's suit\;\ensuremath{\longrightarrow}\;\textbf{1NT Overcall}
+\item Opening strength, shortness in opponent's suit and support for the unbid suits\;\ensuremath{\longrightarrow}\;\textbf{Takeout Double; judge HCP and shape together}
+\item 5--5 or longer in both Majors, 8+ HCP, over a Minor opening\;\ensuremath{\longrightarrow}\;\textbf{Michaels Cuebid}
+\item 5--5 or longer in the other Major and a Minor, 10+ HCP, over a Major opening\;\ensuremath{\longrightarrow}\;\textbf{Michaels Cuebid}
+\item 5--5 or longer in the two lowest unbid suits\;\ensuremath{\longrightarrow}\;\textbf{Unusual 2NT}
+\item Hand suitable for an opening preempt at the same level\;\ensuremath{\longrightarrow}\;\textbf{Weak Jump Overcall; a jump to the two level resembles a weak two, and a jump to the three level resembles a three-level opening}
+\item 8--16 HCP with a good 5+ card suit\;\ensuremath{\longrightarrow}\;\textbf{Natural Overcall; a two-level overcall needs a good suit and extra strength}
+\item Stronger suit hand than a normal overcall\;\ensuremath{\longrightarrow}\;\textbf{Double first, then bid the suit}
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{Opponent opened 1NT}
+\begin{branches}
+\item Strong defensive hand with enough expected tricks to defeat 1NT\;\ensuremath{\longrightarrow}\;\textbf{Penalty Double}
+\item Good long suit and enough playing strength\;\ensuremath{\longrightarrow}\;\textbf{Natural 2\C{}, 2\D{}, 2\Hh{} or 2\S{}; otherwise Pass}
+\item Optional partnership agreements: Landy uses 2\C{} to show both Majors; an agreed unusual 2NT may show both Minors. These replace the natural SAYC treatment and require agreement
+\end{branches}
+\end{guidecard}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Opponent opened a weak two}
+\begin{branches}
+\item Balanced 16--19 HCP with stopper\;\ensuremath{\longrightarrow}\;\textbf{2NT Overcall}
+\item Opening strength, shortness in their suit and support for the unbid suits\;\ensuremath{\longrightarrow}\;\textbf{Takeout Double; judge HCP and shape together}
+\item Strong 5+ card suit and suitable playing strength\;\ensuremath{\longrightarrow}\;\textbf{Natural Overcall at the cheapest level}
+\item Suitable 5--5 or longer two-suiter\;\ensuremath{\longrightarrow}\;\textbf{Michaels Cuebid; otherwise Pass}
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{Opponent opened a three-level preempt}
+\begin{branches}
+\item Opening strength, shortness in their suit and support for the unbid suits\;\ensuremath{\longrightarrow}\;\textbf{Takeout Double}
+\item Strong balanced hand with stopper and enough playing strength\;\ensuremath{\longrightarrow}\;\textbf{Consider 3NT}
+\item Powerful long suit\;\ensuremath{\longrightarrow}\;\textbf{Natural Overcall}
+\item Suitable 5--5 or longer two-suiter\;\ensuremath{\longrightarrow}\;\textbf{Michaels Cuebid; otherwise Pass}
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{Opponent opened a higher preempt}
+\begin{branches}
+\item Double of an opening 4\C{} or 4\D{}\;\ensuremath{\longrightarrow}\;\textbf{Takeout}
+\item Double of an opening 4\Hh{} or higher\;\ensuremath{\longrightarrow}\;\textbf{Penalty}
+\item Otherwise\;\ensuremath{\longrightarrow}\;\textbf{Bid naturally with enough playing strength, or Pass}
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{Two suits already bid?}
+A cuebid of either opponent suit is natural. See the next pages for responses and balancing.
+\end{guidecard}
+
+\end{minipage}
+
+\guidepage{competition}{SECTION 7A}{Competitive responses}{Partner has entered the auction, or an opponent has overcalled partner.}
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Responding to Partner's Suit Overcall}
+\begin{branches}
+\item Support and modest values\;\ensuremath{\longrightarrow}\;\textbf{Simple Raise}
+\item Need a forcing inquiry about overcall strength, with or without support\;\ensuremath{\longrightarrow}\;\textbf{Cuebid opener's suit (Forcing one round); overcaller rebids their suit with a minimum and shows extras otherwise}
+\item Weak hand with extra trumps\;\ensuremath{\longrightarrow}\;\textbf{Jump Raise or raise to game (Preemptive)}
+\item Own good suit\;\ensuremath{\longrightarrow}\;\textbf{New suit (Non-forcing)}
+\item Balanced, stopper in opener's suit\;\ensuremath{\longrightarrow}\;\textbf{Bid Notrump naturally}
+\item After partner's 1NT overcall\;\ensuremath{\longrightarrow}\;\textbf{Natural responses; 2\C{} is Stayman, transfers are not standard SAYC here}
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{Responding to Partner's Takeout Double}
+\begin{branches}
+\item Opponent passes\;\ensuremath{\longrightarrow}\;\textbf{Bid, even with zero points; prefer an unbid Major}
+\begin{branches}
+\item About 0--8 points\;\ensuremath{\longrightarrow}\;\textbf{Best unbid suit at the cheapest level}
+\item About 9--11 points\;\ensuremath{\longrightarrow}\;\textbf{Jump in an unbid suit (Invitational)}
+\item Game values\;\ensuremath{\longrightarrow}\;\textbf{Bid game or cuebid opener's suit to force}
+\item Balanced with stopper\;\ensuremath{\longrightarrow}\;\textbf{1NT with 6--10 HCP, 2NT with 11--12 HCP, or 3NT with game values}
+\item Strong holding in opener's suit\;\ensuremath{\longrightarrow}\;\textbf{May Pass to convert the double to penalties}
+\end{branches}
+\item Opponent bids\;\ensuremath{\longrightarrow}\;\textbf{No obligation to respond; bidding voluntarily shows values}
+\item Doubler after a minimum suit response
+\begin{branches}
+\item Minimum\;\ensuremath{\longrightarrow}\;\textbf{Pass}
+\item Extra strength and support\;\ensuremath{\longrightarrow}\;\textbf{Raise or jump raise}
+\item New suit\;\ensuremath{\longrightarrow}\;\textbf{Strong hand beyond a normal suit overcall}
+\end{branches}
+\end{branches}
+\end{guidecard}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Partner Opened, Opponent Overcalled}
+\begin{branches}
+\item Suitable new suit and enough strength\;\ensuremath{\longrightarrow}\;\textbf{Bid naturally (Forcing by an unpassed hand)}
+\item At least 4 cards in an unbid Major, without a suitable natural suit bid\;\ensuremath{\longrightarrow}\;\textbf{Negative Double, through 2\S{}}
+\begin{branches}
+\item 1-level overcall\;\ensuremath{\longrightarrow}\;\textbf{Usually 6+ points, with the 5-card Heart exception below}
+\item 2-level overcall\;\ensuremath{\longrightarrow}\;\textbf{Usually 8+ points}
+\item 1\C{} opening, 1\D{} overcall\;\ensuremath{\longrightarrow}\;\textbf{Double shows at least 4 cards in each Major}
+\item Minor opening, 1\Hh{} overcall\;\ensuremath{\longrightarrow}\;\textbf{Double shows exactly 4 Spades; 1\S{} shows 5+}
+\item Minor opening, 1\S{} overcall\;\ensuremath{\longrightarrow}\;\textbf{Double shows 4 Hearts and 6+ points, or 5 Hearts and 5--10 points; direct 2\Hh{} shows 5+ Hearts and 11+ points}
+\end{branches}
+\item Support and 6--10 TP\;\ensuremath{\longrightarrow}\;\textbf{Simple Raise}
+\item Support and invitational values\;\ensuremath{\longrightarrow}\;\textbf{Jump Raise: 10--11 dummy points for a Major, 10--12 TP for a Minor}
+\item Game-forcing values without a clear natural direction\;\ensuremath{\longrightarrow}\;\textbf{Cuebid opponent's suit; usually a raise, but support is not required}
+\item Balanced with stopper\;\ensuremath{\longrightarrow}\;\textbf{Natural Notrump response}
+\item Penalty holding in opponent's suit\;\ensuremath{\longrightarrow}\;\textbf{Pass; opener may reopen with a takeout double}
+\item Opener after a Negative Double\;\ensuremath{\longrightarrow}\;\textbf{Bid a shown suit with a minimum or show extras with a stronger rebid}
+\end{branches}
+\end{guidecard}
+
+\end{minipage}
+
+\guidepage{interference}{SECTION 7B}{Interference / balancing}{Apply the specific exception before the general rule that interference cancels a convention.}
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Opponent Doubled Partner's Suit Opening}
+\begin{branches}
+\item 1-level new suit\;\ensuremath{\longrightarrow}\;\textbf{Forcing, unlimited}
+\item 2-level non-jump new suit\;\ensuremath{\longrightarrow}\;\textbf{Non-forcing, 6--10 points, usually a 6-card suit}
+\item Jump Shift\;\ensuremath{\longrightarrow}\;\textbf{Weak, 6+ card suit, to play}
+\item Good support, normally 4+ cards, and 10+ TP\;\ensuremath{\longrightarrow}\;\textbf{2NT (Limit raise or better)}
+\item 10+ HCP without a better descriptive bid\;\ensuremath{\longrightarrow}\;\textbf{Redouble}
+\item Weak hand with good support\;\ensuremath{\longrightarrow}\;\textbf{Preemptive Jump Raise}
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{Redoubles}
+\begin{branches}
+\item Opponent made a takeout double\;\ensuremath{\longrightarrow}\;\textbf{Shows strength}
+\item Own suit contract doubled for penalty at the 3-level or below\;\ensuremath{\longrightarrow}\;\textbf{SOS; asks partner to choose another suit and shows support for at least 2 unbid suits}
+\item Own contract at the 4-level or higher, or opponent doubled a conventional bid\;\ensuremath{\longrightarrow}\;\textbf{To play}
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{Balancing / Reopening}
+Opponent's opening followed by two Passes; your Pass would end the auction.\par\smallskip
+\begin{branches}
+\item Suitable shape\;\ensuremath{\longrightarrow}\;\textbf{Reopen with a suit bid or takeout double; may be lighter than a direct action}
+\item Balanced 10--15 HCP\;\ensuremath{\longrightarrow}\;\textbf{Reopen 1NT}
+\item No suitable action\;\ensuremath{\longrightarrow}\;\textbf{Pass}
+\item Partner\;\ensuremath{\longrightarrow}\;\textbf{Allow for lighter balancing strength when responding}
+\end{branches}
+\end{guidecard}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Interference over Partner's 1NT}
+\begin{branches}
+\item Opponent doubles\;\ensuremath{\longrightarrow}\;\textbf{Stayman and transfers remain on}
+\item Opponent bids a suit\;\ensuremath{\longrightarrow}\;\textbf{Stayman and transfers are off}
+\begin{branches}
+\item Own suit\;\ensuremath{\longrightarrow}\;\textbf{Natural}
+\item Game-forcing values and Major interest\;\ensuremath{\longrightarrow}\;\textbf{Cuebid opponent's suit as a substitute for Stayman}
+\end{branches}
+\item Opponent doubles a transfer
+\begin{branches}
+\item Opener has a real fit\;\ensuremath{\longrightarrow}\;\textbf{Complete the transfer voluntarily}
+\item Only 2-card support\;\ensuremath{\longrightarrow}\;\textbf{May Pass; responder can bid their Major}
+\item Good holding in the doubled suit\;\ensuremath{\longrightarrow}\;\textbf{Redouble to play}
+\end{branches}
+\item Opponent interferes after a conventional response\;\ensuremath{\longrightarrow}\;\textbf{Retain its meaning where possible; voluntary bids show a real fit}
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{Other Interference}
+\begin{branches}
+\item Non-competitive conventions normally stop applying after an opponent's bid or double unless specifically retained
+\item Partner opened a weak two\;\ensuremath{\longrightarrow}\;\textbf{The forcing 2NT feature inquiry remains on after an opponent's bid or double}
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{Two-Suited Overcalls}
+\begin{branches}
+\item Partner used Michaels over a Major\;\ensuremath{\longrightarrow}\;\textbf{2NT asks for the unspecified Minor}
+\item Partner used Michaels or Unusual 2NT\;\ensuremath{\longrightarrow}\;\textbf{Prefer a shown suit; raise with fit, or explore game with strength}
+\item Opponent used Michaels or Unusual 2NT
+\begin{branches}
+\item 10+ points and defensive interest\;\ensuremath{\longrightarrow}\;\textbf{Double}
+\item Game-forcing values\;\ensuremath{\longrightarrow}\;\textbf{Cuebid a suit they showed}
+\item Otherwise\;\ensuremath{\longrightarrow}\;\textbf{Bid naturally or Pass}
+\end{branches}
+\item Opponents have already bid two suits\;\ensuremath{\longrightarrow}\;\textbf{A cuebid of either is natural, not Michaels}
+\end{branches}
+\end{guidecard}
+
+\end{minipage}
+
+\guidepage{slam}{SECTION 8}{Slam decisions}{Check playing strength, controls and a safe stopping place before asking for aces.}
+\compactpage
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Slam No Trump}
+\begin{branches}
+\item Slam interest\;\ensuremath{\longrightarrow}\;\textbf{Evaluate combined strength; about 33 HCP is a small-slam guide}
+\item Partner's natural 1NT or 2NT opening or rebid
+\begin{branches}
+\item Invite based on strength\;\ensuremath{\longrightarrow}\;\textbf{Bid 4NT (Quantitative; partner accepts with a maximum)}
+\item Check Aces\;\ensuremath{\longrightarrow}\;\textbf{Bid 4\C{} (Gerber)}
+\begin{branches}
+\item 4\D{}\;\ensuremath{\longrightarrow}\;\textbf{0 or 4 Aces}
+\item 4\Hh{}\;\ensuremath{\longrightarrow}\;\textbf{1 Ace}
+\item 4\S{}\;\ensuremath{\longrightarrow}\;\textbf{2 Aces}
+\item 4NT\;\ensuremath{\longrightarrow}\;\textbf{3 Aces}
+\end{branches}
+\end{branches}
+\item Partner opened 3NT\;\ensuremath{\longrightarrow}\;\textbf{4\C{} is Stayman, not Gerber}
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{Slam Trump Suit}
+\begin{branches}
+\item Agreed trump suit and slam interest\;\ensuremath{\longrightarrow}\;\textbf{Evaluate playing strength and controls; 33 TP is a guide, not a requirement}
+\item Control bidding\;\ensuremath{\longrightarrow}\;\textbf{Bid a side suit to show a control while exploring slam in the agreed trump suit}
+\item No agreed trump suit\;\ensuremath{\longrightarrow}\;\textbf{Do not assume 4NT is Blackwood}
+\item Agreed trump suit and enough strength
+\begin{branches}
+\item Void or two quick losers in a side suit\;\ensuremath{\longrightarrow}\;\textbf{Prefer control bidding to Blackwood}
+\item Before Blackwood\;\ensuremath{\longrightarrow}\;\textbf{Make sure an unfavourable response still leaves a safe stopping place; a response above 5 of your minor may already force you too high}
+\item Check Aces\;\ensuremath{\longrightarrow}\;\textbf{Bid 4NT (Standard Blackwood)}
+\begin{branches}
+\item 5\C{}\;\ensuremath{\longrightarrow}\;\textbf{0 or 4 Aces}
+\item 5\D{}\;\ensuremath{\longrightarrow}\;\textbf{1 Ace}
+\item 5\Hh{}\;\ensuremath{\longrightarrow}\;\textbf{2 Aces}
+\item 5\S{}\;\ensuremath{\longrightarrow}\;\textbf{3 Aces}
+\end{branches}
+\end{branches}
+\item Missing two Aces or inadequate controls\;\ensuremath{\longrightarrow}\;\textbf{Stop below slam}
+\end{branches}
+\end{guidecard}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{King Asking and Grand Slam}
+\begin{branches}
+\item After Gerber's Ace response, with all four Aces confirmed\;\ensuremath{\longrightarrow}\;\textbf{5\C{} asks for Kings}
+\begin{branches}
+\item 5\D{}\;\ensuremath{\longrightarrow}\;\textbf{0 or 4 Kings}
+\item 5\Hh{}\;\ensuremath{\longrightarrow}\;\textbf{1 King}
+\item 5\S{}\;\ensuremath{\longrightarrow}\;\textbf{2 Kings}
+\item 5NT\;\ensuremath{\longrightarrow}\;\textbf{3 Kings}
+\end{branches}
+\item After Gerber's Ace response, any bid by the asker other than 5\C{}\;\ensuremath{\longrightarrow}\;\textbf{To play, including 4NT}
+\item After Blackwood, with all four Aces confirmed\;\ensuremath{\longrightarrow}\;\textbf{5NT asks for Kings}
+\begin{branches}
+\item 6\C{}\;\ensuremath{\longrightarrow}\;\textbf{0 or 4 Kings}
+\item 6\D{}\;\ensuremath{\longrightarrow}\;\textbf{1 King}
+\item 6\Hh{}\;\ensuremath{\longrightarrow}\;\textbf{2 Kings}
+\item 6\S{}\;\ensuremath{\longrightarrow}\;\textbf{3 Kings}
+\end{branches}
+\item Jump to 5NT in an agreed suit auction\;\ensuremath{\longrightarrow}\;\textbf{Grand Slam Force, distinct from the Blackwood follow-up}
+\begin{branches}
+\item 2 of the top 3 trump honours\;\ensuremath{\longrightarrow}\;\textbf{Bid 7 of the agreed suit}
+\item Fewer\;\ensuremath{\longrightarrow}\;\textbf{Bid 6 of the agreed suit}
+\item Some nonjump 5NT bids in five-level auctions also carry this meaning; the auction must distinguish them from a Blackwood King ask
+\end{branches}
+\item Opponent bids over Gerber 4\C{} or Blackwood 4NT\;\ensuremath{\longrightarrow}\;\textbf{Use DOPI in SAYC}
+\begin{branches}
+\item Double with 0 Aces, Pass with 1, cheapest bid with 2, next bid with 3
+\end{branches}
+\item Opponent doubles the Ace ask\;\ensuremath{\longrightarrow}\;\textbf{ROPI is an optional partnership extension}
+\begin{branches}
+\item If agreed\;\ensuremath{\longrightarrow}\;\textbf{Redouble with 0 Aces, Pass with 1, cheapest bid with 2, next bid with 3}
+\end{branches}
+\end{branches}
+\end{guidecard}
+
+\begin{guidecard}{Contract thresholds}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.43\linewidth}X@{}}\textbf{Contract}&\textbf{Combined guide}\\\hline
+3NT & 25+ HCP\\[3pt]
+4\Hh{} / 4\S{} & 25+ TP\\[3pt]
+5\C{} / 5\D{} & 28--29+ TP\\[3pt]
+Small slam (6-level) & 33+ HCP in NT; 33+ TP in suits\\[3pt]
+Grand slam (7-level) & 37+ HCP in NT; 37+ TP in suits\\[3pt]
+Partscore & Below game values: HCP in NT; TP in suits
+\end{tabularx}\par\smallskip
+Typical partscores: 1NT / 2NT; 1--4 of a minor; 1--3 of a major. Suit slams need 12 or 13 tricks and adequate controls; TP alone does not establish this.
+\end{guidecard}
+
+\end{minipage}
+
+\guidepage{defense}{SECTION 9}{Defensive leads / signals}{Standard SAYC carding. Use the auction and visible cards to interpret a signal.}
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Opening lead}
+\begin{branches}
+\item Touching honours or an interior honour sequence\;\ensuremath{\longrightarrow}\;\textbf{Lead the top of the sequence}
+\item Against suit contracts, from A--K--x\;\ensuremath{\longrightarrow}\;\textbf{Lead the Ace}
+\item Leads from length\;\ensuremath{\longrightarrow}\;\textbf{Fourth-best}
+\begin{branches}
+\item From 3 small cards against a suit contract\;\ensuremath{\longrightarrow}\;\textbf{Lead the lowest}
+\item From 3 small cards against notrump\;\ensuremath{\longrightarrow}\;\textbf{Lead the highest}
+\item From 4 or more cards without an honour\;\ensuremath{\longrightarrow}\;\textbf{Lead the second-highest}
+\end{branches}
+\end{branches}
+\end{guidecard}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Attitude and count}
+\begin{branches}
+\item Following suit or discarding, when attitude applies
+\begin{branches}
+\item High card\;\ensuremath{\longrightarrow}\;\textbf{Encourage}
+\item Low card\;\ensuremath{\longrightarrow}\;\textbf{Discourage}
+\end{branches}
+\item Count signals, when used
+\begin{branches}
+\item High then low\;\ensuremath{\longrightarrow}\;\textbf{Even number}
+\item Low then high\;\ensuremath{\longrightarrow}\;\textbf{Odd number}
+\end{branches}
+\item Signals guide partner; the visible cards and auction still determine the play
+\end{branches}
+\end{guidecard}
+
+\end{minipage}
+
+\guidepage{glossary1}{GLOSSARY 1 / 2}{Shapes / bidding terms}{Use these definitions when a branch refers to hand shape, support or the meaning of a call.}
+\compactpage
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Hand and suits}
+\entry{Balanced}{A 4--3--3--3, 4--4--3--2, or 5--3--3--2 hand.}
+\entry{Controls}{Aces or voids stop the first round of a suit; Kings or singletons can stop the second round in a suit contract.}
+\entry{Doubleton}{You have 2 cards in this suit}
+\entry{Fit}{A suit suitable for trumps, usually with at least eight cards combined between you and partner.}
+\entry{Honours}{A, K, Q, J, and 10. The top three honours are A, K, and Q.}
+\entry{Major Suit (Major)}{\Hh{}\S{}}
+\entry{Minor Suit (Minor)}{\C{}\D{}}
+\entry{Outside}{Cards outside of your long suits}
+\entry{Side Suit}{A suit other than the agreed trump suit.}
+\entry{Singleton}{You have a single card in a suit}
+\entry{Stopper}{A holding that can win a trick in a suit before opponents can run it; lower honours need enough small cards for protection.}
+\entry{Suit}{\C{}\D{}\Hh{}\S{}}
+\entry{Support}{Cards in partner's suit that help form a trump fit.}
+\entry{Trump}{The suit whose cards beat cards of other suits. You may play a trump on another suit's lead only when unable to follow suit; the highest trump played wins the trick.}
+\entry{Unbalanced}{A hand outside the standard balanced shapes.}
+\entry{Void}{You have no cards in a suit}
+\entry{[X]-Card Suit}{[X] is number of cards you have in the suit}
+\end{guidecard}
+
+\begin{guidecard}{Contracts}
+\entry{Contract}{The final bid, specifying the trump suit or Notrump. The bid level plus six is the number of tricks required, so 3NT requires nine tricks.}
+\entry{Game}{A made contract worth at least 100 trick points, excluding bonuses.}
+\entry{Grand Slam}{A 7-level contract requiring all 13 tricks.}
+\entry{Notrump (NT)}{A contract with no trump suit.}
+\entry{Partscore}{A made contract worth fewer than 100 trick points, excluding bonuses.}
+\entry{Slam}{Term for attempting to win between 12 and 13 tricks (6-7 bid)}
+\entry{Small Slam}{A 6-level contract requiring 12 tricks.}
+\entry{Trick}{One card played by each player; the winning card takes the trick.}
+\end{guidecard}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Bidding and raising}
+\entry{Artificial}{You are bidding something which means something else}
+\entry{Forcing}{Partner must bid again; a one-round force requires one more bid, a game force requires reaching game.}
+\entry{Invitational}{Asks partner to bid higher with extra strength; partner may Pass.}
+\entry{Jump Raise}{Raising partner's suit while skipping at least one available level.}
+\entry{Jump Rebid}{Rebidding your own suit while skipping an available level.}
+\entry{Jump Shift}{Bidding a new suit while skipping an available level; its strength depends on the auction.}
+\entry{Limit Raise}{An invitational raise showing support and asking partner to bid game with extra strength.}
+\entry{Natural}{A bid describing the named suit or a willingness to play Notrump.}
+\entry{Passed Hand}{A player who passed before partner opened.}
+\entry{Preference}{Returning to one of partner's suits, sometimes with only limited support.}
+\entry{Raising}{Bidding partner's suit at a higher level to show support.}
+\entry{Rebid}{A second bid by the same player.}
+\entry{Reverse}{Showing a higher-ranking second suit at a level that forces preference to your first suit one level higher.}
+\entry{Sign Off}{A bid intended to end the auction in the chosen contract.}
+\entry{Simple Raise}{Raising partner's suit one level.}
+\entry{Up the Line}{Bidding the lowest available of equally long suits.}
+\end{guidecard}
+
+\end{minipage}
+
+\guidepage{glossary2}{GLOSSARY 2 / 2}{Competition / conventions}{The numbered decision sections give the continuations. Optional methods require agreement.}
+\compactpage
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Competitive bidding}
+\entry{Balancing}{Bidding after an opening and two Passes, when your Pass would end the auction.}
+\entry{Cooperative Double}{Asks partner to choose between defending doubled and bidding, by partnership agreement.}
+\entry{Cuebid}{Bidding a suit an opponent has already bid in}
+\entry{Interference}{An opponent bids or doubles during your auction.}
+\entry{Negative Double}{A responder's takeout double after partner opens and an opponent overcalls; usually shows an unbid Major.}
+\entry{Overcall}{A bid after an opponent's opening.}
+\entry{Penalty Double}{A double intended to defeat the opponent's contract and increase the penalty.}
+\entry{Preempt}{A high-level bid with a long suit and limited strength that takes bidding space from opponents.}
+\entry{Psychic Bid}{A bid that deliberately misrepresents your strength or suit length.}
+\entry{Redouble}{A call after an opponent doubles; can show strength, be to play, or ask for rescue.}
+\entry{Takeout Double}{A double asking partner to bid an unbid suit, usually showing opening strength and support for the unbid suits.}
+\entry{Vulnerability}{The scoring condition that increases game/slam bonuses and penalties for failed contracts.}
+\entry{Weak Jump Overcall (WJO)}{A jump bid over an opponent's opening, showing a long suit and weak strength.}
+\entry{Weak Two}{An opening 2\D{}, 2\Hh{}, or 2\S{} normally showing a good six-card suit and limited strength; see Section 1 for the occasional length exceptions.}
+\end{guidecard}
+
+\begin{guidecard}{Ace and feature inquiries}
+\entry{Blackwood}{4NT in an agreed suit auction asks for Aces.}
+\entry{DOPI}{After an opponent bids over Gerber 4\C{} or Blackwood 4NT: Double with 0 Aces, Pass with 1, cheapest bid with 2, next bid with 3.}
+\entry{Feature Asking}{2NT over a weak two asks opener to show an outside Ace or protected King with a maximum hand.}
+\end{guidecard}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\textwidth}\vspace{0pt}
+
+\begin{guidecard}{Conventions continued}
+\entry{Fourth Suit Forcing}{Responder bids the fourth suit at the 2-level or higher to seek more information; in SAYC normally forcing one round.}
+\entry{Gambling 3NT}{An optional agreement showing a solid 7+ card Minor with little outside strength; SAYC uses a strong balanced 3NT opening.}
+\entry{Gerber}{4\C{} over a natural 1NT or 2NT opening or rebid asks for Aces.}
+\entry{Grand Slam Force}{A jump to 5NT asks for a grand slam with 2 of the top 3 trump honours.}
+\entry{Jacoby 2NT}{A game-forcing 2NT response to a 1\Hh{} or 1\S{} opening, showing 4+ trump support and 13+ dummy points.}
+\entry{Jacoby Transfers}{Over 1NT, bid 2\D{} for 5+ Hearts or 2\Hh{} for 5+ Spades; partner bids your Major.}
+\entry{Landy}{A 2\C{} overcall of 1NT showing both Majors, by partnership agreement.}
+\entry{Law of Total Tricks}{With a fit, combined trump length guides competitive raises; it estimates total tricks available to both sides.}
+\entry{Michaels Cuebid}{A cuebid of opponent's opening suit showing 5--5 or longer: both Majors over a Minor, or the other Major and a Minor over a Major.}
+\entry{Pass-or-Correct}{Partner passes with the bid suit or corrects to their actual suit.}
+\entry{Quantitative Slam}{A 4NT raise of natural notrump invites 6NT; partner accepts with a maximum.}
+\entry{ROPI}{After Ace asking is doubled: Redouble with 0 Aces, Pass with 1; agreed extension.}
+\entry{SOS Redouble}{Asks partner to escape a low-level doubled suit contract by choosing another suit.}
+\entry{Stayman}{Asks for a 4-card Major. Over 1NT: 2\D{} denies a Major, 2\Hh{} shows Hearts and may include Spades, 2\S{} shows Spades without Hearts.}
+\entry{Unusual 2NT}{A jump overcall of 2NT showing 5--5 or longer in the two lowest unbid suits.}
+\end{guidecard}
+
+\end{minipage}
+\vfill\noindent{\scriptsize\color{muted}Based on \texttt{bridge-bidding-guide.md}. Official sources: ACBL SAYC System Booklet (revised January 2006), \url{https://web2.acbl.org/documentLibrary/play/sayc_book.pdf}; SAYC card, \url{https://web2.acbl.org/documentLibrary/play/sayc_card.pdf}. Evaluation formulas are teaching aids; supplementary treatments are labelled.}
+
+\end{document}
